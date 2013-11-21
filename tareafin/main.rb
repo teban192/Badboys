@@ -1,16 +1,16 @@
 
 
 require "rubygems" #libreria para usar programas gems
-require 'oauth'
+require "oauth" #libreria de para llevar a cabo la autentificacion con el usuario
 require 'hpricot' #libreria para machetear un html
 require 'open-uri'
 require "sinatra"
 require 'erb'
 
-$Url1; 
-	
-$Titulo1;
-$Autor1;
+$Album1;$Album2;$Album3;$Album4;$Album5;$Album6;$Album7;$Album8;$Album9;$Album10;
+$Titulo1;$Titulo2;$Titulo3;$Titulo4;$Titulo5;$Titulo6;$Titulo7;$Titulo8;$Titulo9;$Titulo10;
+$Autor1;$Autor2;$Autor3;$Autor4;$Autor5;$Autor6;$Autor7;$Autor8;$Autor9;$Autor10;
+$Url1;$Url2;$Url3;$Url3;$Url4;$Url5;$Url6;$Url7;$Url8;$Url9;$Url10;
 
 class DatosDePagina
 	attr_accessor :titulo, :artista, :link, :derecho
@@ -35,12 +35,95 @@ def actualiza()
 	puts lista[i].titulo
 	puts lista[i].derecho 
 	puts lista[i].link
-		puts ("\n" )
+	puts ("\n" )
 	
-$Url1=lista[i].link;
+	$Url1=lista[i].link; $Titulo1=lista[i].derecho; $Autor1=lista[i].artista; $Album1=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-1].artista 
+	puts lista[i-1].titulo
+	puts lista[i-1].derecho 
+	puts lista[i-1].link
+	puts ("\n" )
 	
-$Titulo1=lista[i].derecho;
-$Autor1=lista[i].artista; 
+	$Url2=lista[i-1].link; $Titulo2=lista[i-1].derecho; $Autor2=lista[i-1].artista; $Album2=lista[i].titulo; 
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-2].artista 
+	puts lista[i-2].titulo
+	puts lista[i-2].derecho 
+	puts lista[i-2].link
+	puts ("\n" )
+	
+	$Url3=lista[i-2].link; $Titulo3=lista[i-2].derecho; $Autor3=lista[i-2].artista; $Album3=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-3].artista 
+	puts lista[i-3].titulo
+	puts lista[i-3].derecho 
+	puts lista[i-3].link
+	puts ("\n" )
+	
+	$Url4=lista[i-3].link; $Titulo4=lista[i-3].derecho; $Autor4=lista[i-3].artista; $Album4=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-4].artista 
+	puts lista[i-4].titulo
+	puts lista[i-4].derecho 
+	puts lista[i-4].link
+	puts ("\n" )
+	
+	$Url5=lista[i-4].link; $Titulo5=lista[i-4].derecho; $Autor5=lista[i-4].artista; $Album5=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-5].artista 
+	puts lista[i-5].titulo
+	puts lista[i-5].derecho 
+	puts lista[i-5].link
+	puts ("\n" )
+	
+	$Url6=lista[i-5].link; $Titulo6=lista[i-5].derecho; $Autor6=lista[i-5].artista; $Album6=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-6].artista 
+	puts lista[i-6].titulo
+	puts lista[i-6].derecho 
+	puts lista[i-6].link
+	puts ("\n" )
+	
+	$Url7=lista[i-6].link; $Titulo7=lista[i-6].derecho; $Autor7=lista[i-6].artista; $Album7=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-7].artista 
+	puts lista[i-7].titulo
+	puts lista[i-7].derecho 
+	puts lista[i-7].link
+	puts ("\n" )
+	
+	$Url8=lista[i-7].link; $Titulo8=lista[i-7].derecho; $Autor8=lista[i-7].artista; $Album8=lista[i].titulo;
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-8].artista 
+	puts lista[i-8].titulo
+	puts lista[i-8].derecho 
+	puts lista[i-8].link
+	puts ("\n" )
+	
+	$Url9=lista[i-8].link; $Titulo9=lista[i-8].derecho; $Autor9=lista[i-8].artista; $Album9=lista[i].titulo; 
+
+	puts ("El tweet %s sera" % (i+1))
+	puts lista[i-9].artista 
+	puts lista[i-9].titulo
+	puts lista[i-9].derecho 
+	puts lista[i-9].link
+	puts ("\n" )
+	
+	$Url10=lista[i-9].link; $Titulo10=lista[i-9].derecho; $Autor10=lista[i-9].artista; $Album10=lista[i].titulo;
+
+
+	
+
+	
 
 	
 	
@@ -152,7 +235,7 @@ get '/No_result' do
 end
 
 
-class Autentificar
+class Autentificar # clase usada en primera instancia para la autentificacion del usuario desde twitter
 
 
 def conectar 
@@ -219,6 +302,8 @@ end
 
 
 iniciar
+
+
 
 
 
